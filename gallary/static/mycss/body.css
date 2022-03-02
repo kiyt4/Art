@@ -1,0 +1,116 @@
+.h3{
+    padding-bottom: 100px;
+}
+    
+
+.udiv{
+    background:linear-gradient(rgb(17, 173, 245),rgb(26, 168, 211));
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.mydiv{
+    background-color: rgb(211, 14, 14);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    justify-content: space-between;
+}
+.her{
+    color: blanchedalmond;
+    display: flex;
+}
+.js{
+    background-color: black;
+    color: white;
+    border-radius: 70px;
+    justify-content: center;
+}
+.jt{
+    margin-left: 20px;
+}
+
+    
+
+.as{
+    font-size: 20px;
+}
+h1{
+    text-align: center;
+    margin-top: 0%;
+
+    font-size: 100px;
+    background:linear-gradient(rgb(22, 133, 177),rgb(0, 225, 255));
+}
+.na{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    margin-top: 0%;
+    font-size: 50px;
+}
+
+ /* .hsa{
+    background: linear-gradient(rgb(214, 40, 40),black);
+    margin: 200px;
+    margin-left: 300px;
+    margin-right: 300px;
+    border:10px solid rgb(11, 235, 48);
+    
+
+}  */
+ .tf{
+    text-align: center;
+}
+.an{
+    background-color: black;
+}
+.dw{
+    border-color: rgb(204, 28, 28);
+    margin-top: 30px; 
+    margin-left: 190px;
+    margin-right: 40px; 
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+.slider{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation:rotate 30s linear infinite;
+}
+@keyframes rotate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.slider span {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+}
+
+.slider span img {
+    position: absolute;
+    top: o;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 100px;
+    object-fit: cover;
+    transition: 2s;
+}

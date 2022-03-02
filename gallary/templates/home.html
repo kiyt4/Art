@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %} 
+
+<div>
+      
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{%static 'images/i.jpg'%}" class="d-block w-100"height="400px" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{%static 'images/a.jpg'%}" class="d-block w-100"height="400px" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{%static 'images/g.jpg'%}" class="d-block w-100"height="400px" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+      {% comment %} container start {% endcomment %}
+      <h1>SELECT YOUR ART</h1>
+      <div class="container mydiv" >
+        <div class="row">
+            <div class="col-lg-4 col-md-4">
+                <!-- Column 1 -->
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'images/im1.jpg'%}" height="400px" class="card-img-top" alt="...">
+                    <div class="card-body js">
+                        <h5 class="card-title">Nature</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="" class="btn btn-success jt">SEE MORE IMAGES</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Column 1 End -->
+            <!-- Column 2 Start -->
+            <div class="col-lg-4 col-md-4 ">
+                <!-- Column 1 -->
+                <div class="card " style="width: 18rem;">
+                    <img src="{% static 'images/computer.jpg'%}" height="400px" class="card-img-top" alt="...">
+                    <div class="card-body js ">
+                        <h4 class="card-title">Tech</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-success jt">  Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <!-- Column 1 -->
+                <div class="card" style="width: 18rem;">
+                    <img src="{%static 'images/old.jpg'%}" height="400px" class="card-img-top" alt="...">
+                    <div class="card-body js">
+                        <h5 class="card-title">old tech</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <a href="" class="btn btn-success jt">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="sec carousel-inner">
+        <div class="carousel-item active">
+          <img src="{%static 'images/cool.jpg'%}" class="d-block w-100"height="500px"width="100%" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{%static 'images/street.jpg'%}" class="d-block w-100"height="500px"width="100%" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{%static 'images/wall.jpg'%}" class="d-block w-100"height="500px"width="100%" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class=" udiv container">
+      <div class="row">
+          <div class="col-lg-4 col-md-4 form">
+              <!-- Column 1 -->
+              <div class="card" style="width: 18rem;">
+                  <img src="{% static 'images/panting1.jpg'%}" height="400px" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Art pic</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                          the card's content.</p>
+                      <a href="#" class="btn btn-success">Go somewhere</a>
+                  </div>
+              </div>
+          </div>
+          <!-- Column 1 End -->
+          <!-- Column 2 Start -->
+          <div class="col-lg-4 col-md-4">
+              <!-- Column 1 -->
+              <div class="card" style="width: 18rem;">
+                  <img src="{% static 'images/panting2.jpg'%}" height="400px" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Art pic</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                          of
+                          the card's content.</p>
+                      <a href="#" class="btn btn-success">Go somewhere</a>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-lg-4">
+              <!-- Column 1 -->
+              <div class="card" style="width: 18rem;">
+                  <img src="{% static 'images/panting3.jpg'%}" height="400px" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Art pic</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                          of
+                          the card's content.</p>
+                      <a href="http://127.0.0.1:8000/out" class="btn btn-success">Go somewhere</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
+  <script>
+    if (window.history.replaceState){
+      (window.history.replaceState( null,null,window.location.href)); 
+    }
+  </script>
+
+
+
+
+{%endblock content %}

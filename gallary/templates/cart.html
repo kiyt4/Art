@@ -1,0 +1,87 @@
+{% extends 'base.html' %} {% load static %} {% block title %} Home {% endblock title %}
+{% load cart %} 
+{% block content %}
+  
+{% if f %}
+<div>
+    <table class="table">
+        <thead style="color:red">
+            <tr>
+                <td>s.no</td>
+                <td>NAME</td>
+                <td>price</td>
+                <td>quantity</td>
+                <td>total price</td>
+            </tr>
+        </thead>
+        
+
+        {% for carts in f %}
+
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td><img src="{{carts.image.url}}" width="100px" hieght="200px"></td>
+            <td>{{carts.productname}}</td>
+            <td>{{carts.price}}</td>
+            <td>{{carts|cartquantity:request.session.cart}}</td>
+            <td>{{carts|totalprice:request.session.cart}}</td>
+        </tr>
+        {% endfor %}
+        <tfoot>
+            <tr>
+                <td>table price</td>
+                <td>{{f|grandtotal:request.session.cart}}</td>
+            </tr>
+        </tfoot>
+        <div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                checkout
+              </button>
+            
+        </div>
+        
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">checkout</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  
+                <form action =  " {% url 'checkout' %}" method="POST">
+                    {% csrf_token %}
+                   <div class="row mb-3">
+                    <label class="fn">Address </label>
+                    <input type="text" name="Address">
+                    <br>
+                    <label class="fn">phone</label>
+                    <input type="text" name="phone">
+                    <br>
+                    
+                   
+                 
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                 <input type="submit"value="save"class="btn btn-primary">
+               </div>
+             </form>
+                    
+          </div>
+
+
+
+
+
+
+    </table>
+    
+</div>
+
+
+{% else %}
+<h1>Add to cart</h1>
+{% endif %}
+
+{% endblock content %}
