@@ -1,20 +1,26 @@
-{% extends 'base.html' %} {% load static %} {% block title %} Home {% endblock title %}
-{% load cart %} 
-{% block content %}
-<div>
-
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="{% static 'css/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <link rel = "stylesheet" href="{% static 'mycss/body.css' %}">
+    <title>Document</title>
+</head>
+<body>
     <div class="slider">
-        <span style="--1:1;"><img src="{%static 'images/o1.jpg'%}"></span>
-        <span style="--1:2;"><img src="{%static 'images/o2.jpg'%}"></span>
-        <span style="--1:3;"><img src="{%static 'images/o3.jpg'%}"></span>
-        <span style="--1:4;"><img src="{%static 'images/o4.jpg'%}"></span>
-        <span style="--1:5;"><img src="{%static 'images/o5.jpg'%}"></span>
-        <span style="--1:6;"><img src="{%static 'images/o6.jpg'%}"></span>
-        <span style="--1:7;"><img src="{%static 'images/o7.jpg'%}"></span>
-        <span style="--1:8;"><img src="{%static 'images/o8.jpg'%}"></span>
+        <span style="--i:1;"><img src="{%static 'images/o1.jpg'%}"></span>
+        <span style="--i:2;"><img src="{%static 'images/o2.jpg'%}"></span>
+        <span style="--i:3;"><img src="{%static 'images/o3.jpg'%}"></span>
+        <span style="--i:4;"><img src="{%static 'images/o4.jpg'%}"></span>
+        <span style="--i:5;"><img src="{%static 'images/o5.jpg'%}"></span>
+        <span style="--i:6;"><img src="{%static 'images/o6.jpg'%}"></span>
+        <span style="--i:7;"><img src="{%static 'images/o7.jpg'%}"></span>
+        <span style="--i:8;"><img src="{%static 'images/o8.jpg'%}"></span>
 
     </div>
-</div>
-
-
-{% endblock content %}
+    
+</body>
+</html>

@@ -36,9 +36,9 @@ def signup(request):
         contact.save()
         send_mail(
                 'subject here',
-                'massage here how are you',
+                'how are you',
                 'ankitsing7838@gmail.com',#sender
-                ['e'],#reciver
+                ['shwetanegi992.sn@gmail.com']#reciver
             )
         
         
